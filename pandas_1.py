@@ -12,3 +12,4 @@ for url in web_URL:
     with open('websites.csv', 'a+') as f:
         f.write(str(url.group()))
         f.write('\n')
+        print(str(url.group()))
