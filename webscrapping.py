@@ -4,6 +4,20 @@ import string
 from bs4 import BeautifulSoup as bs
 from multiprocessing import Pool
 
+'''
+AUTHOR : PUSPENDU
+
+PURPOSE:  This script uses random module to generate
+            random links and using those links it's
+            trying extract the content of the webpage and
+            save the webpage content in the form of a file.
+            if the randomly generated link does not exist
+            exception handling is there.
+
+NOTE: I have used multiprocessing module to run the code in less time
+
+'''
+
 
 def random_url():
     url = [random.choice(string.ascii_lowercase) for _ in range(4)]
@@ -17,7 +31,7 @@ def get_webpage(url):
         webpage = urllib.request.urlopen(url)
         webpage = bs(webpage, 'html')
         print(webpage)
-        with open('D:\\PYTHON_LAB\\raw_url.csv', 'a') as f:
+        with open('D:\\PYTHON_LAB\\raw_url.txt', 'a') as f:
             f.write(str(webpage))
 
     except Exception as e:

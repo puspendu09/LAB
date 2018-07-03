@@ -1,5 +1,16 @@
 import re
 
+'''
+AUTHOR : PUSPENDU
+PURPOSE: This script takes a text file as an input
+         (in this code the 'raw_url.txt')
+         and extract all the  links which matches
+         certain pattern.
+
+NOTE: Please refer webscrapping.py to generate raw_url.txt
+
+'''
+
 with open('raw_url.txt', 'r+') as f:
     text = f.read()
     f.close()
