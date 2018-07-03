@@ -31,7 +31,7 @@ def get_webpage(url):
         webpage = urllib.request.urlopen(url)
         webpage = bs(webpage, 'html')
         print(webpage)
-        with open('D:\\PYTHON_LAB\\raw_url.txt', 'a') as f:
+        with open('D:\\PYTHON_LAB\\raw_url.html', 'a') as f:
             f.write(str(webpage))
 
     except Exception as e:

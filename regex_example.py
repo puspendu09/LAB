@@ -11,7 +11,7 @@ NOTE: Please refer webscrapping.py to generate raw_url.txt
 
 '''
 
-with open('raw_url.txt', 'r+') as f:
+with open('raw_url.html', 'r+') as f:
     text = f.read()
     f.close()
 
@@ -20,7 +20,7 @@ with open('raw_url.txt', 'r+') as f:
 matching_pattern = re.compile(r'https?://[a-zA-Z_0-9.-]+\.[a-zA-Z]+')
 web_URL = matching_pattern.finditer(text)
 for url in web_URL:
-    with open('websites.csv', 'a+') as f:
+    with open('websites.txt', 'a+') as f:
         f.write(str(url.group()))
         f.write('\n')
         print(str(url.group()))
